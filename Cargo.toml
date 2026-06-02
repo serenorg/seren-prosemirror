@@ -1,0 +1,27 @@
+[package]
+name = "seren-prosemirror"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
+authors = ["SerenAI <hello@serendb.com>"]
+description = "ProseMirror JSON handling and conversion to/from Markdown and Org-mode"
+license = "MIT"
+repository = "https://github.com/serenorg/seren-prosemirror"
+readme = "README.md"
+keywords = ["prosemirror", "markdown", "org-mode", "json"]
+categories = ["encoding", "parser-implementations", "text-processing"]
+include = ["src/**", "Cargo.toml", "README.md", "LICENSE"]
+
+[lints.rust]
+unsafe_code = "forbid"
+missing_docs = "warn"
+
+[dependencies]
+serde_json = "1"
+thiserror = "2"
+uuid = { version = "1", default-features = false }
+pulldown-cmark = { version = "0.13", default-features = false }
+
+[features]
+default = []
+orgmode = []
